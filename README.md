@@ -2,14 +2,14 @@
 
 # create a variables.auto.tfvars file
 
-variable "vsphere_user" {
-  default = "username here"
-}
+vsphere_user = "username"
 
-variable "vsphere_password" {
-  default = "password here"
-}
+vsphere_password = "password"
 
-variable "vsphere_server" {
-  default = ""
-}
+vsphere_server = "vsphere hostname"
+
+aci_username = "username"
+
+aci_password = "password"
+
+aci_apic = "APIC URL"
