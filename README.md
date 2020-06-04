@@ -1,6 +1,7 @@
+
 # wwtact_programabilitylab_terrafrom
 
-# create a variables.auto.tfvars file
+# create a variables.auto.tfvars file locally with these variables defined
 
 vsphere_user = "username"
 
@@ -12,4 +13,4 @@ aci_username = "username"
 
 aci_password = "password"
 
-aci_apic = "APIC URL"
+aci_apic = "apic login url"
