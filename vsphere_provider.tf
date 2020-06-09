@@ -35,12 +35,12 @@ data "vsphere_network" "network" {
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
 
-data "vsphere_host" "esxi1" {
+data "vsphere_host" "host" {
   name          = "esxi1"
-  datacenter_id = "${data.vsphere_datacenter.datacenter.id}"
+  datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
 
-data "vsphere_host" "esxi2" {
+data "vsphere_host" "host" {
   name          = "esxi2"
-  datacenter_id = "${data.vsphere_datacenter.datacenter.id}"
+  datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
