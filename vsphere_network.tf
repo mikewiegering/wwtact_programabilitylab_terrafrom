@@ -1,17 +1,3 @@
-variable "esxi_hosts" {
-  default = [
-    "esxi1",
-    "esxi2",
-  ]
-}
-
-variable "network_interfaces" {
-  default = [
-    "vmnic3",
-    "vmnic4",
-    "vmnic5",
-  ]
-}
 
 #data "vsphere_datacenter" "dc" {
  # name = "Datacenter"
