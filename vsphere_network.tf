@@ -41,4 +41,4 @@ variable "network_interfaces" {
     #devices        = ["${var.network_interfaces}"]
   #}
     
-}
+#}
