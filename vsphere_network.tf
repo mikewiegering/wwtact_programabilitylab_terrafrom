@@ -9,10 +9,11 @@
 #  datacenter_id = "${data.vsphere_datacenter.dc.id}"
 # }
 
-data "vsphere_host" "host1" {
+data "vsphere_host" "host" {
   name          = "esxi1.lab.local"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
+
 
 # data "vsphere_host" "host2" {
 #   name          = "esxi2.lab.local"
