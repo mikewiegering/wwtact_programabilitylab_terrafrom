@@ -31,14 +31,11 @@ resource "vsphere_distributed_virtual_switch" "dvs" {
 
     host {
     host_system_id = "${data.vsphere_host.host.id}"
-    devices        = ["vmnic3", "vmnic4", "vmnic5"]
+    devices        = ["vmnic0", "vmnic1"]
   }
 
 #   host {
 #     host_system_id = "${data.vsphere_host.host.1.id}"
 #     devices        = ["vmnic3", "vmnic4", "vmnic5"]
 #   }
-  
- 
-    
 }
