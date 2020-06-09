@@ -17,11 +17,11 @@ variable "network_interfaces" {
  # name = "Datacenter"
 #}
 
-data "vsphere_host" "host" {
-  count         = "${length(var.esxi_hosts)}"
-  name          = "${var.esxi_hosts[count.index]}"
-  datacenter_id = "${data.vsphere_datacenter.dc.id}"
-}
+#data "vsphere_host" "host" {
+#  count         = "${length(var.esxi_hosts)}"
+#  name          = "${var.esxi_hosts[count.index]}"
+#  datacenter_id = "${data.vsphere_datacenter.dc.id}"
+#}
 
 resource "vsphere_distributed_virtual_switch" "dvs" {
   name          = "terraform-test-dvs"
