@@ -10,7 +10,7 @@
 #}
 
 resource "vsphere_distributed_virtual_switch" "dvs" {
-  name          = "terraform_test_dvs"
+  name          = "tf_test_dvs"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 
   uplinks         = ["uplink1", "uplink2", "uplink3", "uplink4"]
