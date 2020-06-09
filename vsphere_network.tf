@@ -40,4 +40,5 @@ resource "vsphere_distributed_virtual_switch" "dvs" {
     host_system_id = "${data.vsphere_host.host.1.id}"
     devices        = ["${var.network_interfaces}"]
   }
-
+    
+}
