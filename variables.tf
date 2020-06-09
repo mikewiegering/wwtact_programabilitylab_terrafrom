@@ -37,4 +37,3 @@ variable "network_interfaces" {
   ]
 }
 
-network_interfaces = [ "vmnic3" , "vmnic4" , "vmnic5" ]
