@@ -14,12 +14,10 @@ data "vsphere_host" "host1" {
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
 
-data "vsphere_host" "host2" {
-  name          = "esxi2.lab.local"
-  datacenter_id = "${data.vsphere_datacenter.dc.id}"
-}
-
-
+# data "vsphere_host" "host2" {
+#   name          = "esxi2.lab.local"
+#   datacenter_id = "${data.vsphere_datacenter.dc.id}"
+# }
 
 
 resource "vsphere_distributed_virtual_switch" "dvs" {
