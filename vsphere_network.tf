@@ -32,12 +32,12 @@ resource "vsphere_distributed_virtual_switch" "dvs" {
   standby_uplinks = ["uplink2", "uplink3"]
 
   host {
-    host_system_id = "${data.vsphere_host.esxi1.lab.local.id}"
+    host_system_id = "${data.vsphere_host.esxi1.id}"
     devices        = ["${var.network_interfaces}"]
   }
 
   host {
-    host_system_id = "${data.vsphere_host.esxi2.lab.local.id}"
+    host_system_id = "${data.vsphere_host.esxi2.id}"
     devices        = ["${var.network_interfaces}"]
   }
     
