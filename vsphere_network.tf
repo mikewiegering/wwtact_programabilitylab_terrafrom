@@ -41,4 +41,4 @@ resource "vsphere_distributed_virtual_switch" "dvs" {
     #devices        = ["${var.network_interfaces}"]
   #}
     
-#}
+}
