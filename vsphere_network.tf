@@ -13,9 +13,9 @@ variable "network_interfaces" {
   ]
 }
 
-data "vsphere_datacenter" "dc" {
-  name = "Datacenter"
-}
+#data "vsphere_datacenter" "dc" {
+ # name = "Datacenter"
+#}
 
 data "vsphere_host" "host" {
   count         = "${length(var.esxi_hosts)}"
