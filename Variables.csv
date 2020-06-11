@@ -1,0 +1,2 @@
+vlan_id,aci_tenant,aci_vrf,aci_l3out,aci_app_profile,dvs,aci_bd,aci_subnet,aci_epg
+10,tftenant,test_vrf_1,bdtest_l3out,access,tf_test_dvs,test_bd_1,10.0.10.1/24,epg_10
