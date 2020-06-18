@@ -1,5 +1,5 @@
 data "local_file" "network_csv" {
-   filename = "${/Terraform/Terraform/wwtact_programabilitylab_terrafrom}/network_csv.csv"
+   filename = "/Terraform/Terraform/wwtact_programabilitylab_terrafrom/network_csv.csv"
 }
 
 # fileexists("${/Terraform/Terraform/wwtact_programabilitylab_terrafrom}/network_csv.csv")
