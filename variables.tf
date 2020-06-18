@@ -1,8 +1,8 @@
 data "local_file" "network_csv" {
-   filename = "${PWD}/network_csv.csv"
+   filename = "${/Terraform/Terraform/wwtact_programabilitylab_terrafrom}/network_csv.csv"
 }
 
-# fileexists("${PWD}/network_csv.csv")
+# fileexists("${/Terraform/Terraform/wwtact_programabilitylab_terrafrom}/network_csv.csv")
 
 variable "vsphere_user" {
   default = "username"
