@@ -1,8 +1,8 @@
-#data "local_file" "network_csv" {
-#    filename = "${PWD}/network_csv.csv"
-#}
+data "local_file" "network_csv" {
+   filename = "${PWD}/network_csv.csv"
+}
 
-fileexists("${PWD}/network_csv.csv")
+# fileexists("${PWD}/network_csv.csv")
 
 variable "vsphere_user" {
   default = "username"
