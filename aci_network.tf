@@ -1,6 +1,7 @@
-locals{
+locals {
 
-csvdata = csvdecode(file("./network_csv.csv")
+csvdata = csvdecode(file("./network_csv.csv"))
+
 }
 
 resource "aci_bridge_domain" "tfbd" {
