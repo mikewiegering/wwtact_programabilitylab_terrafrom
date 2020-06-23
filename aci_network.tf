@@ -15,9 +15,7 @@ resource "aci_bridge_domain" "tfbd" {
 
 resource "aci_subnet" "tfsubnet" {
         count            = length(local.csvdata)
-        bd               = ttbd[count]
-        bdid             = "aci_bridge_domain.${var.bd}.id"
-        bridge_domain_dn = bdid
+        bridge_domain_dn = local.csvdata[count.index].bd_dn
         description      = local.csvdata[count.index].aci_subnet
         ip               = local.csvdata[count.index].aci_subnet
     
