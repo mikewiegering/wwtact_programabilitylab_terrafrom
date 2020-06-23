@@ -29,10 +29,10 @@ resource "vsphere_distributed_virtual_switch" "dvs" {
   active_uplinks  = ["uplink1", "uplink2"]
   standby_uplinks = ["uplink3", "uplink4"]
 
-    host {
-    host_system_id = "${data.vsphere_host.host.id}"
-    devices        = ["vmnic0", "vmnic1"]
-  }
+#     host {
+#     host_system_id = "${data.vsphere_host.host.id}"
+#     devices        = ["vmnic0", "vmnic1"]
+#   }
 
 #   host {
 #     host_system_id = "${data.vsphere_host.host.1.id}"

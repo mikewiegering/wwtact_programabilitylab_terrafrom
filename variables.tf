@@ -1,6 +1,6 @@
-data "local_file" "network_csv" {
-   filename = "${chomp(file("/Terraform/Terraform/wwtact_programabilitylab_terrafrom/network_csv.csv"))}"
-}
+# data "local_file" "network_csv" {
+#    filename = "${chomp(file("/Terraform/Terraform/wwtact_programabilitylab_terrafrom/network_csv.csv"))}"
+# }
 
 # locals {
 #   network_csv = csvdecode(file("/Terraform/Terraform/wwtact_programabilitylab_terrafrom/network_csv.csv"))
