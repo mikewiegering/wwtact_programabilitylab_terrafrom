@@ -15,7 +15,7 @@ resource "aci_application_profile" "tfapp" {
 
 resource "aci_vrf" "tfvrf" {
   count                  = length(local.csvdata)
-  tenant_dn              = "uni/tn-tftenant/ctx-${local.csvdata[count.indext].aci_vrf}"
+  tenant_dn              = "uni/tn-tftenant/ctx-${local.csvdata[count.index].aci_vrf}"
   name                   = local.csvdata[count.index].aci_vrf
   
 }
