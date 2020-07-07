@@ -35,6 +35,8 @@ resource "vsphere_distributed_virtual_switch" "tfdvs" {
   active_uplinks  = ["uplink1", "uplink2"]
   standby_uplinks = ["uplink3", "uplink4"]
 
+}
+
   data "vsphere_host" "host" {
   name          = "esxi1.lab.local"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
