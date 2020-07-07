@@ -25,6 +25,7 @@ data "vsphere_compute_cluster" "cluster" {
 data "vsphere_network" "network" {
   name          = "Sim-Mgmt"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
+}
 
 resource "vsphere_distributed_virtual_switch" "tfdvs" {
   name          = "tf_test_dvs"
