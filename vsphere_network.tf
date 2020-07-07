@@ -1,10 +1,10 @@
 
 
-locals {
+# locals {
 
-csvdata = csvdecode(file("./network_csv.csv"))
+# csvdata = csvdecode(file("./network_csv.csv"))
 
-}
+# }
 
 
 # data "vsphere_distributed_virtual_switch" "tfdvs" {
