@@ -15,7 +15,7 @@ resource "aci_bridge_domain" "tfbd" {
 
 resource "aci_subnet" "tfsubnet" {
         count            = length(local.csvdata)
-        parent_dn = "uni/tn-tftenant/BD-${local.csvdata[count.index].aci_bd}"
+        parent_dn        = "${aci_bridge_domain.(local.csvdata[count.index].aci_bd).id}"
         description      = local.csvdata[count.index].aci_subnet
         ip               = local.csvdata[count.index].aci_subnet
     
