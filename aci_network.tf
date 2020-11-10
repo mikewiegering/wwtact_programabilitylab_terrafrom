@@ -5,10 +5,10 @@ csvdata = csvdecode(file("./network_csv.csv"))
 }
 
 resource "aci_bridge_domain" "tfbd" {
-        count                       = length(local.csvdata)
+        for_each = { for bd in local.csvdata : bd.aci_subnet => bd }
         tenant_dn                   = "${aci_tenant.tftenant.id}"
-        description                 = local.csvdata[count.index].aci_bd
-        name                        = local.csvdata[count.index].aci_bd
+        description                 = each.value.aci_bd
+        name                        = each.value.aci_bd
 
         
     }
@@ -16,7 +16,7 @@ resource "aci_bridge_domain" "tfbd" {
 resource "aci_subnet" "tfsubnet" {
         for_each = { for subnet in local.csvdata : subnet.aci_subnet => subnet }
         
-        parent_dn        = "${aci_bridge_domain.each.value.aci_bd.id}"
+        parent_dn        = "${aci_bridge_domain.bdname.id}"
         description      = each.value.aci_subnet
         ip               = each.value.aci_subnet
        
