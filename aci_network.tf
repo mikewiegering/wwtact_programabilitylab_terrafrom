@@ -14,11 +14,12 @@ resource "aci_bridge_domain" "tfbd" {
     }
 
 resource "aci_subnet" "tfsubnet" {
-        count            = length(local.csvdata)
-        parent_dn        = "${aci_bridge_domain.(local.csvdata[count.index].aci_bd).id}"
-        description      = local.csvdata[count.index].aci_subnet
-        ip               = local.csvdata[count.index].aci_subnet
-    
+        for_each = { for subnet in local.csvdata : subnet.aci_subnet => subnet }
+        bd_for_subnet    = subnet.aci_bd
+        parent_dn        = "${aci_bridge_domain.bd_for_subnet.id}"
+        description      = subnet.aci_subnet
+        ip               = subnet.aci_subnet
+       
     } 
 
     
