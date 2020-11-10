@@ -24,6 +24,6 @@ csvdata = csvdecode(file("./network_csv.csv"))
 
 
 output "csvtest" {
-  value = "${csvdata.aci_bd[*]}"
+  value = "${local.csvdata.aci_bd}"
 
 }
