@@ -1,6 +1,6 @@
 
 
-resource "aci_tenant" "footenant" {
+resource "aci_tenant" "tftenant" {
   name        = "tftenant"
   annotation  = "tag tenant"
 }
