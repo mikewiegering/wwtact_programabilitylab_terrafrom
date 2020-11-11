@@ -24,6 +24,9 @@ csvdata = csvdecode(file("./network_csv.csv"))
 
 
 output "csvtest" {
-  value = "${local.csvdata.aci_bd[2]}"
+  
+  for_each = { for value in local.csvdata  }
+ 
+  value = "${local.csvdata.aci_bd}"
 
 }
