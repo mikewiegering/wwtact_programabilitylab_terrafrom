@@ -1,5 +1,8 @@
+
+
 resource "aci_tenant" "tftenant" {
   name        = "tftenant"
+  annotation  = "tag tenant"
 }
 
 resource "aci_vrf" "tfvrf" {
