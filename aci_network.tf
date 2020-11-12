@@ -15,7 +15,7 @@ resource "aci_bridge_domain" "tfbd" {
 
 resource "aci_subnet" "tfsubnet" {
         for_each = { for subnet in local.csvdata : subnet.aci_subnet => subnet }
-        parent_dn        = "uni/tn-tftenant/BD-${each.value.aci_bd}"
+        bridge_domain_dn        = "uni/tn-tftenant/BD-${each.value.aci_bd}"
         description      = each.value.aci_subnet
         ip               = each.value.aci_subnet
        
