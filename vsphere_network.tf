@@ -17,10 +17,10 @@
 # }
 
 resource "vsphere_distributed_port_group" "tfpg" {
-  count                           = length(local.csvdata)
-  name                            = local.csvdata[count.index].dist_pg
+  for_each = { for pg in local.csvdata : pg.dist_pg => pg }
+  name                            = each.value.dist_pg
   distributed_virtual_switch_uuid = "${vsphere_distributed_virtual_switch.tfdvs.id}"
 
-  vlan_id = local.csvdata[count.index].vlan_id
+  vlan_id = each.value.vlan_id
 }
 
