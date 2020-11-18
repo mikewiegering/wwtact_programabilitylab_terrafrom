@@ -13,13 +13,13 @@ resource "aci_bridge_domain" "tfbd" {
         
     }
 
-# resource "aci_subnet" "tfsubnet" {
-#         for_each = { for subnet in local.csvdata : subnet.aci_subnet => subnet }
-#         bridge_domain_dn = "uni/tn-tftenant/BD-${each.value.aci_bd}"
-#         description      = each.value.subnet_description
-#         ip               = each.value.aci_subnet
+resource "aci_subnet" "tfsubnet" {
+        for_each = { for subnet in local.csvdata : subnet.aci_subnet => subnet }
+        bridge_domain_dn = "uni/tn-tftenant/BD-${each.value.aci_bd}"
+        description      = each.value.subnet_description
+        ip               = each.value.aci_subnet
        
-#     } 
+    } 
 
 
 
