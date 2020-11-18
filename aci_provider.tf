@@ -1,10 +1,30 @@
- provider "aci" {
-    # cisco-aci user name
-    username = var.aci_username
-    # cisco-aci password
-    password = var.aci_password
-    # cisco-aci url
-    url      = var.aci_apic
-    insecure = true
-    version = "0.3.4"
+ terraform {
+  required_providers {
+    aci = {
+      source = "CiscoDevNet/aci"
+      version = "0.3.4"
+      # cisco-aci user name
+      username = var.aci_username
+      # cisco-aci password
+      password = var.aci_password
+      # cisco-aci url
+      url      = var.aci_apic
+      insecure = true
+    }
+  }
 }
+ 
+ 
+ 
+ 
+ 
+#  provider "aci" {
+#     # cisco-aci user name
+#     username = var.aci_username
+#     # cisco-aci password
+#     password = var.aci_password
+#     # cisco-aci url
+#     url      = var.aci_apic
+#     insecure = true
+#     version = "0.3.4"
+# }

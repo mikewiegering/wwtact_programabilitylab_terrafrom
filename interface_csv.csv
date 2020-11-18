@@ -1,0 +1,6 @@
+switch_profile,VLAN_pool,virt_phy_domain,aaep,interface_policy_group,interface_selector
+10,,tftenant,,test_vrf_1,bdtest_l3out
+20,,tftenant,,test_vrf_1,bdtest_l3out
+30,,tftenant,,test_vrf_1,bdtest_l3out
+40,,tftenant,,test_vrf_1,bdtest_l3out
+50,,tftenant,,test_vrf_1,bdtest_l3out
