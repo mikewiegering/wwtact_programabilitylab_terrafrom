@@ -3,4 +3,5 @@ vlan_id,aci_tenant,aci_vrf,aci_l3out,aci_app_profile,dvs,aci_bd,bd_description,a
 20,tftenant,test_vrf_1,bdtest_l3out,access,tf_test_dvs,test_bd_20,BD 20,10.0.20.1/24,VLAN 20,epg_20,tf_test_dvs,test_pg_20
 40,tftenant,test_vrf_1,bdtest_l3out,access,tf_test_dvs,test_bd_40,BD 40,10.0.40.1/24,VLAN 40,epg_40,tf_test_dvs,test_pg_40
 50,tftenant,test_vrf_1,bdtest_l3out,access,tf_test_dvs,test_bd_50,BD 50,10.0.50.1/24,VLAN 50,epg_50,tf_test_dvs,test_pg_50
+60,tftenant,test_vrf_1,bdtest_l3out,access,tf_test_dvs,test_bd_60,BD 60,10.0.60.1/24,VLAN 60,epg_60,tf_test_dvs,test_pg_60
 70,tftenant,test_vrf_1,bdtest_l3out,access,tf_test_dvs,test_bd_70,BD 70,10.0.70.1/24,VLAN 70,epg_70,tf_test_dvs,test_pg_70
