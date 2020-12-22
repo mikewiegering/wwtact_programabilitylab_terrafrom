@@ -21,5 +21,10 @@ resource "aci_subnet" "tfsubnet" {
        
     } 
 
-
+resource "aci_application_epg" "tfepg" {
+    for_each = { for epg in local.csvdata : epg.aci_epg => epg }
+    application_profile_dn  = "uni/tn-tftenant/epg-${each.value.aci_epg}"
+    name                              = each.value.aci_epg
+    
+  }
 
